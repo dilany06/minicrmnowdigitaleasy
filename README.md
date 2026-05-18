@@ -58,8 +58,8 @@ All protected routes require an `Authorization: Bearer <token>` header. The back
 
 Task status updates are restricted in `PATCH /api/tasks/:id/status`: only the task's assigned user can update its status. Admins can create and assign tasks, but the assignment rule is still enforced for status changes to match the assignment note. Lead deletion is a soft delete that sets `isDeleted=true` and `deletedAt`; normal lead queries always include `isDeleted: false`.
 
-## Deployment Notes
+## Deployment 
 
 - Deploy `frontend` to Netlify with build command `npm run build` and publish directory `dist`.
 - Set `VITE_API_URL` in Netlify to the deployed backend API URL, for example `https://your-api.onrender.com/api`.
-- Deploy `backend` to Render/Railway/Fly with `MONGO_URI`, `JWT_SECRET`, and `CLIENT_URL` environment variables.
+- Deploy `backend` to Render with `MONGO_URI`, `JWT_SECRET`, and `CLIENT_URL` environment variables.
