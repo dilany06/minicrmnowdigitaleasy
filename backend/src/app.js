@@ -21,6 +21,7 @@ app.use('/api/leads', leadsRoutes);
 app.use('/api/companies', companiesRoutes);
 app.use('/api/tasks', tasksRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+app.use(cors({ origin: process.env.CLIENT_URL }))
 
 app.use((req, res) => {
   res.status(404).json({ message: `Route not found: ${req.originalUrl}` });
