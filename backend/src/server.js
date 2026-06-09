@@ -1,4 +1,9 @@
-import dotenv from 'dotenv';
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import mongoose from "mongoose";
+import morgan from "morgan";
+git add .import dotenv from 'dotenv';
 import { app } from './app.js';
 import { connectDb } from './config/db.js';
 
@@ -8,7 +13,7 @@ const port = process.env.PORT || 5000;
 
 connectDb()
   .then(() => {
-    app.listen(port, () => console.log(`API running on port ${port} - server.js:11`));
+    app.listen(port, () => console.log(`API running on port ${port} - server.js:16`));
   })
   .catch((error) => {
     console.error(error);
