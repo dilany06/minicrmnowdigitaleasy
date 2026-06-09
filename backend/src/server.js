@@ -3,7 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import morgan from "morgan";
-git add .import dotenv from 'dotenv';
+import dotenv from 'dotenv';
 import { app } from './app.js';
 import { connectDb } from './config/db.js';
 
